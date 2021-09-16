@@ -33,5 +33,50 @@
          <li>Games like Uno and Sequence</li>
      </ul>
      <a href="./aboutme.html">Link to aboutme</a>
+     <hr>
+     <h2>My favourite food that i recommand to try</h2>
+     <P>Here i am providing information about my fav food that i recommand others to try</P>
+     <table>
+         <tr>
+             <th>Item</th>
+             <th>Location</th>
+             <th>Amount</th>
+         </tr>
+         <tr>
+             <td>Chicken Biryani</td>
+             <td>Hyderabad</td>
+             <td>Rs40</td>
+         </tr>
+     </table>
+     <hr>
+     <h3>Code</h3>
+     <block quote="https://en.wikipedia.org/wiki/Graph_traversal">In computer science, graph traversal (also known as graph search) refers to the process of visiting (checking and/or updating) each vertex in a graph. Such traversals are classified by the order in which the vertices are visited. 
+        Tree traversal is a special case of graph traversal.</block>
+        <a href="https://en.wikipedia.org/wiki/Graph_traversal">link to source code </a>
+        <pre>
+            vector<vector<int>> adj;  // adjacency list representation
+                int n; // number of nodes
+                int s; // source vertex
+                
+                queue<int> q;
+                vector<bool> used(n);
+                vector<int> d(n), p(n);
+                
+                q.push(s);
+                used[s] = true;
+                p[s] = -1;
+                while (!q.empty()) {
+                    int v = q.front();
+                    q.pop();
+                    for (int u : adj[v]) {
+                        if (!used[u]) {
+                            used[u] = true;
+                            q.push(u);
+                            d[u] = d[v] + 1;
+                            p[u] = v;
+                        }
+                    }
+                }
+        </pre>
     </body>
 </html>
